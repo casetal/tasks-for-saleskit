@@ -7,8 +7,8 @@
 <div class="task-add">
     <form method="post" action="/tasks">
         {{ csrf_field() }}
-        <p>Название: <input class="form-control" type="text" name="title" placeholder="Название задачи"></p>
-        <p>Описание: <textarea class="form-control" name="description" placeholder="Описание задачи"></textarea></p>
+        <p>Название: <input class="form-control" type="text" name="title" placeholder="Название задачи" required></p>
+        <p>Описание: <textarea class="form-control" name="description" placeholder="Описание задачи" required></textarea></p>
         <p><input type="hidden" name="status" value="0"></p>
         <p><input type="submit" class="btn btn-success" value="Добавить"></p>
     </form>

@@ -10,9 +10,9 @@
 
         <div class="task">
             <div class="card p-4">
-                <p>Название: <input type="text" name="title" class="form-control" value="{{ $task->title }}"></p>
+                <p>Название: <input type="text" name="title" class="form-control" value="{{ $task->title }}" required></p>
 
-                <p>Описание: <textarea name="description" class="form-control" placeholder="Описание задачи">{{ $task->description }}</textarea></p>
+                <p>Описание: <textarea name="description" class="form-control" placeholder="Описание задачи" required>{{ $task->description }}</textarea></p>
 
                 <div class="status">
                     Статус: 
