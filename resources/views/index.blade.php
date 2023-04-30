@@ -20,10 +20,7 @@
         .dates > * {
             padding: 5px 0;
         }
-        .status {
-            float: left;
-        }
-        
+                
         .button-delete input {
             width: 100%;
             margin-top: 20px;

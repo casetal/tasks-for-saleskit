@@ -2,21 +2,18 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    <a href="/tasks">Список задач</a>
+    <div class="card">
+        <div class="card-body">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }}
                 </div>
-            </div>
+            @endif
+            @guest
+                Сначала авторизуйтесь, чтобы можно было просматривать и редактировать список задач
+            @else
+                <a href="/tasks">Перейти на список задач >></a>
+            @endguest
         </div>
     </div>
 </div>
