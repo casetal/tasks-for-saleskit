@@ -17,7 +17,7 @@ class TaskController extends Controller
     
     public function index() {
         $task = new Task;  
-        return view('tasks', ['tasks' => $task->orderBy('id', 'desc')->get()]);
+        return view('tasks', ['tasks' => $task->orderBy('updated_at', 'desc')->get()]);
     }
 
     public function insert(Request $request) {
